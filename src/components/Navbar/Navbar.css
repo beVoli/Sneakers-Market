@@ -15,7 +15,7 @@
   .navbar {
     display: flex;
     justify-content: space-between;
-    height: 5rem;
+    height: 4rem;
   }
 }
 
@@ -32,8 +32,8 @@
 
 @media (min-width: 1050px) {
   .nav-logo a {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -56,6 +56,8 @@
 .nav-links.active{
   display: flex;
   position: absolute;
+  z-index: 999;
+  background-color: var(--clr-secondary-100);
   border-radius: 10px;
   top:110%;
   left: 2%;
@@ -113,6 +115,10 @@
   color: var(--clr-primary);
 }
 
+.nav-link.active {
+  color: var(--clr-primary);
+}
+
 .menu {
   display: flex;
   justify-content: start;
@@ -148,7 +154,7 @@
     border-radius: 10px;
     padding: 0.3rem 1rem;
     gap: 0.3rem;
-    margin-block: 0.6rem;
+    margin-block: 0.1rem;
   }
 }
 

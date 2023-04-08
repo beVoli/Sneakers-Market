@@ -1,11 +1,17 @@
 .market {
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   flex-basis: 85%;
   border: 1px solid var(--clr-gray);
 }
 
+@media(max-width: 750px) {
+  .market {
+    flex-basis: 100%;
+  }
+}
+
 .market-category {
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   font-weight: var(--fw-medium);
   margin-bottom: 2rem;
 }

@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className={`nav-links ${isActive ? "active" : ""}`}>
         <ul>
           <li>
-            <a className="nav-link" href="/">
+            <a className="nav-link active" href="/">
               Home
             </a>
           </li>
@@ -51,12 +51,12 @@ const Navbar = () => {
           </li>
           <li>
             <a className="nav-link" href="/">
-              Man
+              Men
             </a>
           </li>
           <li>
             <a className="nav-link" href="/">
-              Woman
+              Women
             </a>
           </li>
           <li>

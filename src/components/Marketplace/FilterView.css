@@ -4,6 +4,13 @@
   border: 1px solid var(--clr-gray);
 }
 
+@media (max-width: 750px)
+{
+  .filter-view {
+    display: none;
+  }
+}
+
 .filter-view button {
   background: none;
   border: none;
