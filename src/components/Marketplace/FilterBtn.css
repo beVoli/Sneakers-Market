@@ -1,0 +1,25 @@
+.btn-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--clr-gray);
+  border: 1px solid var(--clr-gray);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.btn-filter:hover{
+  background: var(--clr-primary);
+  color: var(--clr-secondary-100);
+}
+
+.btn-filter.selected {
+  background: var(--clr-primary);
+  color: var(--clr-secondary-100);
+}
+
+
+
+

@@ -1,14 +1,34 @@
 import "./Navbar.css";
 import logo from "../../images/logo/logo2.png";
 import userPic from "../../images/profile/userProfile.jpg";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [searchActive, setSearchActive] = useState(false);
+  const buttonRef = useRef(null);
 
   const openMobileMenuHandler = () => {
     setIsActive(!isActive);
   };
+
+  const searchBarHandler = () => {
+    setSearchActive(true);
+  }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setSearchActive(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [buttonRef]);
 
   return (
     <div className="navbar">
@@ -50,10 +70,10 @@ const Navbar = () => {
         <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
       </div>
 
-      <div className="search-bar">
+      <div className={`search-bar ${searchActive && 'active'}`}>
         <ion-icon class="search-icon" name="search-outline"></ion-icon>
 
-        <input type="text" placeholder="Search for sneakers..."></input>
+        <input onClick={searchBarHandler} ref={buttonRef} type="text" placeholder="Search for sneakers..."></input>
       </div>
 
       <div className="widgets">

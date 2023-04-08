@@ -5,6 +5,7 @@
   grid-template-rows: 4rem auto;
   max-width: 80rem;
   margin-inline: auto;
+  margin-bottom: 1rem;
   padding-inline: 1.25rem;
   padding-top: 0.8rem;
   position: relative;
@@ -159,6 +160,10 @@
   background: none;
   font-size: var(--fs-400);
   order: 1;
+}
+
+.search-bar input:focus {
+  outline: none;
 }
 
 @media (min-width: 1050px) {

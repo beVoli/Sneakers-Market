@@ -1,0 +1,11 @@
+.market {
+  padding: 2rem;
+  flex-basis: 85%;
+  border: 1px solid var(--clr-gray);
+}
+
+.market-category {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-medium);
+  margin-bottom: 2rem;
+}
