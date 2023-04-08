@@ -1,16 +1,24 @@
 import "./Navbar.css";
-import logo from "../../images/logo/logo.png";
-import userPic from "../../images/profile/userProfile.jpg"
+import logo from "../../images/logo/logo2.png";
+import userPic from "../../images/profile/userProfile.jpg";
+import { useState } from "react";
+
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const openMobileMenuHandler = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <div className="navbar flex">
+    <div className="navbar">
       <div className="nav-logo">
         <a href="/">
           <img src={logo} alt="Image of the logo"></img>
         </a>
       </div>
-      <div className="nav-links grid">
-        <ul className="flex">
+      <div className={`nav-links ${isActive ? "active" : ""}`}>
+        <ul>
           <li>
             <a className="nav-link" href="/">
               Home
@@ -38,23 +46,25 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <div className="menu" onClick={openMobileMenuHandler}>
+        <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+      </div>
 
-      <div className="nav-navigate flex">
-        <div className="search-bar flex">
-          <ion-icon class="search-icon" name="search-outline"></ion-icon>
-          <input type="text" placeholder="Enter your search shoes..."></input>
-        </div>
+      <div className="search-bar">
+        <ion-icon class="search-icon" name="search-outline"></ion-icon>
 
-        <div className="widgets flex">
-          <a href="/">
+        <input type="text" placeholder="Search for sneakers..."></input>
+      </div>
+
+      <div className="widgets">
+        <a href="/">
           <ion-icon class="favorite-icon" name="heart-outline"></ion-icon>
-          </a>
-          <a href="/">
+        </a>
+        <a href="/">
           <ion-icon class="cart-icon" name="bag-handle-outline"></ion-icon>
-          </a>
-          <div className="profile">
-          </div>
-        </div>
+        </a>
+
+        <div className="profile"></div>
       </div>
     </div>
   );
