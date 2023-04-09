@@ -12,10 +12,6 @@ const FilterBtn = (props) => {
     <div>
       <button
         className={`btn-filter ${isActive ? 'selected' : ''}`}
-        // style={{
-        //   background: `${isActive ? "#b6002c" : "#f5f5f5"}`,
-        //   color: `${isActive ? "#fff" : "#000"}`,
-        // }}
         onClick={selectFilter}
       >
         <span className="btn-name">{props.children}</span>
