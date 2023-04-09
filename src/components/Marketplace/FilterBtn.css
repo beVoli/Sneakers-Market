@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.btn-filter:hover{
+.btn-filter:hover {
   background: var(--clr-primary);
   color: var(--clr-secondary-100);
 }
@@ -19,7 +19,3 @@
   background: var(--clr-primary);
   color: var(--clr-secondary-100);
 }
-
-
-
-

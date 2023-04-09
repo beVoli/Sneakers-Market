@@ -1,17 +1,8 @@
 .filter-view {
   gap: 0.5rem;
   flex: 0 1 12rem;
-  padding-inline: 1.25rem;
+  padding-inline: 0.5rem;
   border: 1px solid var(--clr-gray);
 }
-
-@media (min-width: 840px) {
-  .filter-view {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-}
-
 
 

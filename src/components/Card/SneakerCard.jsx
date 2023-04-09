@@ -34,9 +34,7 @@ const SneakerCard = ({ image }) => {
             <span>4.9 (120 reviews)</span>
           </div>
           <div className="product-price">
-            <span className="discount">$130.00</span>
-            <span>10lei</span>
-
+            <span>unleu</span>
             <ion-icon class="bag-icon" name="bag-handle-outline"></ion-icon>
           </div>
         </div>

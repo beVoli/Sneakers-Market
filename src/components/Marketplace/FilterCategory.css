@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 0.5rem;
   border-bottom: 1px solid var(--clr-gray);
-  padding-bottom: 0.5rem;
 }
 
 .filter-category button {
@@ -18,14 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 1rem;
+  padding: 0.5rem 1rem;
+  margin-block: 0.5rem;
   border-radius: 10px;
-}
-
-@media (min-width: 740px) {
-  .category {
-    padding: 0.5rem 1rem;
-  }
 }
 
 .category:hover {
@@ -50,4 +44,5 @@
   align-items: start;
   gap: 0.5rem;
   padding-inline: 0.8rem;
+  padding-bottom: 0.5rem;
 }

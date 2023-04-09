@@ -1,2 +1,7 @@
 Navbar
 1) Make mobile menu transition
+2) Make sneaker buy page
+3) Make a home page
+
+
+9) Make tranitions

@@ -4,12 +4,6 @@
   border: 1px solid var(--clr-gray);
 }
 
-@media(max-width: 750px) {
-  .market {
-    flex-basis: 100%;
-  }
-}
-
 .market-category {
   font-size: var(--fs-450);
   font-weight: var(--fw-medium);
