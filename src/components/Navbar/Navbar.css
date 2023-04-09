@@ -106,7 +106,7 @@
   text-decoration: none;
   color: var(--clr-secondary-900);
   font-weight: var(--fw-medium);
-  font-size: var(--fs-450);
+  font-size: var(--fs-400);
   transition: all 300ms;
 }
 

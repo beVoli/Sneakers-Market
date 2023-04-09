@@ -14,12 +14,18 @@
 }
 
 .category {
-  font-size: var(--fs-450);
+  font-size: var(--fs-400);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding-block: 1rem;
   border-radius: 10px;
+}
+
+@media (min-width: 740px) {
+  .category {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .category:hover {
