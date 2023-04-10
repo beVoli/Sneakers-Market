@@ -1,15 +1,11 @@
 import "./FilterList.css";
 import FilterBtn from './FilterBtn';
 
-const FilterList = () => {
+
+const FilterList = ({filterOptions}) => {
+
   return <div className="filter-btn-list">
-    <FilterBtn>Category</FilterBtn>
-    <FilterBtn>Size</FilterBtn>
-    <FilterBtn>Brand</FilterBtn>
-    <FilterBtn>Color</FilterBtn>
-    <FilterBtn>Price</FilterBtn>
-    <FilterBtn>Material</FilterBtn>
-    <FilterBtn>Sort by</FilterBtn>
+    {filterOptions.map(option => <FilterBtn key={Math.random()} optionName={option.criteria}/>)}
   </div>;
 };
 

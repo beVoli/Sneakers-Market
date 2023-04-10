@@ -1,12 +1,13 @@
 import "./FilterView.css";
 import FilterCategory from "./FilterCategory";
 
-const FilterView = () => {
+
+const FilterView = ({ filterOptions }) => {
   return (
-    <div className='filter-view'>
-      <FilterCategory category={"Category"} />
-      <FilterCategory category={"Color"} />
-      <FilterCategory category={"Size"} />
+    <div className="filter-view">
+      {filterOptions.map((option) => (
+        <FilterCategory key={Math.random()} category={option.criteria} options={option.options} />
+      ))}
     </div>
   );
 };

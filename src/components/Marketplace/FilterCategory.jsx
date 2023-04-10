@@ -2,8 +2,8 @@ import './FilterCategory.css';
 import FilterOption from "./FilterOption";
 import { useState } from "react";
 
-const FilterCategory = ({ category }) => {
-  const [isActive, setIsActive] = useState(false);
+const FilterCategory = ({ category, options}) => {
+  const [isActive, setIsActive] = useState(true);
 
   const arrowStateHandler = () => {
     setIsActive(!isActive);
@@ -41,10 +41,7 @@ const FilterCategory = ({ category }) => {
       </button>
       {isActive && (
         <div className="category-options">
-          <FilterOption>Sneakers</FilterOption>
-          <FilterOption>Flats</FilterOption>
-          <FilterOption>Sandals</FilterOption>
-          <FilterOption>Heels</FilterOption>
+          {options.map(option => <FilterOption key={Math.random()} option={option}  />)}
         </div>
       )}
     </div>

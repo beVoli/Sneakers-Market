@@ -1,23 +1,21 @@
 import "./FilterBtn.css";
 import { useState } from "react";
 
-const FilterBtn = (props) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const selectFilter = () => {
-    setIsActive(!isActive);
-  };
+const FilterBtn = ({optionName }) => {
+  const [isActive, setIsActive] = useState(true);
 
   return (
-    <div>
-      <button
-        className={`btn-filter ${isActive ? 'selected' : ''}`}
-        onClick={selectFilter}
-      >
-        <span className="btn-name">{props.children}</span>
-        {isActive && <ion-icon name="checkmark-outline"></ion-icon>}
-      </button>
-    </div>
+    <>
+      {isActive && (
+        <button className={`btn-filter`}>
+          <span className="btn-name">{optionName}</span>
+          <ion-icon
+            onClick={() => setIsActive(false)}
+            name="close-outline"
+          ></ion-icon>
+        </button>
+      )}
+    </>
   );
 };
 

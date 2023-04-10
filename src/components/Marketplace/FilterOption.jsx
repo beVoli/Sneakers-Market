@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./FilterOption.css";
 
-const FilterOption = ({ children }) => {
+const FilterOption = ({option }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const changeSelection = () => {
@@ -12,7 +12,7 @@ const FilterOption = ({ children }) => {
     <div>
       <button className="category-option" onClick={changeSelection}>
         <div className={`option-circle ${isSelected && "selected"}`}></div>
-        <span className="option">{children}</span>
+        <span className="option">{option}</span>
       </button>
     </div>
   );
